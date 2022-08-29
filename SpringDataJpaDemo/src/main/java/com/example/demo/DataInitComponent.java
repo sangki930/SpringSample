@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 // SpringApplication Load시 초기 설정
 @Component
 public class DataInitComponent {
+	
 	// ApplicationRunner 활용
 //	@Autowired
 //    private MemberRepository memberRepository;
