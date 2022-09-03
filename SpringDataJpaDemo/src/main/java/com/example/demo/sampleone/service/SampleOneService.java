@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import com.example.demo.sampleone.SampleOne;
 import com.example.demo.sampleone.repository.SampleOneRepository;
 
+
 @Service
 public class SampleOneService {
 
@@ -19,4 +20,12 @@ public class SampleOneService {
 	public SampleOne addAndFlush(SampleOne sampleOne) {
 		return sampleOneRepository.saveAndFlush(sampleOne);
 	}
+	
+	public void deleteSampleOne(SampleOne sampleOne) {
+		sampleOneRepository.delete(sampleOne);;
+	}
+	
+//	public Example<SampleOne> hasSampleOne(SampleOne sampleOne) {
+//		return sampleOneRepository.exists(Example.of());
+//	}
 }
