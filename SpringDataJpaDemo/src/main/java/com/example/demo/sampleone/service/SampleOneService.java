@@ -1,5 +1,7 @@
 package com.example.demo.sampleone.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,14 @@ public class SampleOneService {
 	@Autowired
 	public SampleOneService(SampleOneRepository sampleOneRepository) {
 		this.sampleOneRepository = sampleOneRepository;
+	}
+	
+	public List<SampleOne> getSampleOneList(){
+		return sampleOneRepository.findAll();
+	}
+	
+	public SampleOne getSampleOne(long id) {
+		return sampleOneRepository.getById(id);
 	}
 	
 	public SampleOne addAndFlush(SampleOne sampleOne) {

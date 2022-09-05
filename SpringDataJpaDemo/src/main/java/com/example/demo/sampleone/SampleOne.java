@@ -32,6 +32,8 @@ public class SampleOne extends CommonEntity{
 	
 	private String attr1;
 	
+	private String attr2;
+	
 	@PrePersist
     public void prePersist() {
         LocalDateTime now = LocalDateTime.now();

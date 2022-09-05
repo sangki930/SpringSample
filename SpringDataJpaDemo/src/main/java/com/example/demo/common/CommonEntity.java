@@ -1,6 +1,5 @@
 package com.example.demo.common;
 
-import java.time.Instant;
 import java.time.LocalDateTime;
 
 import javax.persistence.Column;
@@ -12,6 +11,8 @@ import org.springframework.data.annotation.LastModifiedDate;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+// 공통 엔티티 클래스
 
 @Data
 @AllArgsConstructor
