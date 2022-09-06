@@ -17,14 +17,14 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@MappedSuperclass
+@MappedSuperclass // 
 public class CommonEntity {
 	
 	@Column(updatable = false)
-	@CreatedDate
-	private LocalDateTime created_at;
+	@CreatedDate // 엔티티 생성 시각
+	private LocalDateTime created_at; // 엔티티 생성 시각
 	
-	@LastModifiedDate
-	private LocalDateTime updated_at;
+	@LastModifiedDate // 마지막 수정 시각
+	private LocalDateTime updated_at; // 최근 수정 시각
 	private boolean deleted;
 }
