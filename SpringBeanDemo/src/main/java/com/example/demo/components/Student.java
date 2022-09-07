@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 import lombok.extern.slf4j.Slf4j;
 
-@Component
+@Component("student")
 @Slf4j
 public class Student implements Person{
 

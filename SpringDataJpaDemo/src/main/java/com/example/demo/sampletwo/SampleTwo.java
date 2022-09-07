@@ -3,6 +3,8 @@ package com.example.demo.sampletwo;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
 import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -14,6 +16,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
+@Table(uniqueConstraints = {
+		@UniqueConstraint(columnNames = {"name"})
+})
 @Data
 @Builder
 @AllArgsConstructor
@@ -27,4 +32,6 @@ public class SampleTwo extends CommonEntity{
 	private String name;
 	
 	private String attr1;
+	
+	private String attr2;
 }

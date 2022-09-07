@@ -13,10 +13,7 @@ public class ApplicationConfig {
 
 	@Autowired
 	private SampleComponent sc;
-	
-	@Qualifier(value = "teacher")
-	@Autowired
-	private Person person;
+
 	
 	@Bean
 	public void print() {
