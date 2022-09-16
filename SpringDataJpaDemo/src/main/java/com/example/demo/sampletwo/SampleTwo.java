@@ -2,6 +2,8 @@ package com.example.demo.sampletwo;
 
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
@@ -34,4 +36,11 @@ public class SampleTwo extends CommonEntity{
 	private String attr1;
 	
 	private String attr2;
+	
+	@Enumerated(EnumType.STRING)
+	private Type type;
+}
+
+enum Type{
+	ADMIN, USER
 }
