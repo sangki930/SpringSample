@@ -37,7 +37,7 @@ public class SampleTwo extends CommonEntity{
 	
 	private String attr2;
 	
-	@Enumerated(EnumType.STRING)
+	@Enumerated(EnumType.STRING) // 컬럼이 Enum 타입일 때
 	private Type type;
 }
 

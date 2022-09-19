@@ -14,7 +14,7 @@ import com.example.demo.sampleone.SampleOne;
 import com.example.demo.sampleone.repository.SampleOneRepository;
 
 @SpringBootTest
-@DataJpaTest // JPA 테스트할 때마다 롤백됨
+@DataJpaTest // JPA 테스트가 끝나면 롤백됨
 @AutoConfigureTestDatabase
 @AutoConfigureTestEntityManager
 public class JPATest {
@@ -38,7 +38,5 @@ public class JPATest {
 	public void getSampleOne() {
 		System.out.println(sor.getById(1L));
 	}
-	
-	
 
 }
