@@ -16,7 +16,7 @@ import lombok.Data;
 @Builder
 @AllArgsConstructor
 public class SampleFour extends CommonEntity{
-//
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
