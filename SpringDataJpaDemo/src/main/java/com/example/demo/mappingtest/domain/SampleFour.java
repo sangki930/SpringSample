@@ -1,9 +1,11 @@
 package com.example.demo.mappingtest.domain;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import com.example.demo.common.CommonEntity;
 
@@ -28,5 +30,8 @@ public class SampleFour extends CommonEntity{
 	private String attr2;
 	
 	private String attr3;
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	private SampleThree sampleThree;
 	
 }
