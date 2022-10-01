@@ -1,4 +1,4 @@
-package com.example.demo.mappingtest.repository;
+package com.example.demo.mappingtest.samplethree.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

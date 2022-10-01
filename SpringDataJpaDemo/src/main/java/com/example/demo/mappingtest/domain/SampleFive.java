@@ -1,5 +1,7 @@
 package com.example.demo.mappingtest.domain;
 
-public class SampleFive {
+import com.example.demo.common.CommonEntity;
+
+public class SampleFive extends CommonEntity{
 
 }
