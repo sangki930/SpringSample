@@ -25,4 +25,5 @@ public interface BoardMybatis2 {
 	
 	@Select("SELECT * FROM board order by seq desc")
 	public List<BoardVO> getBoardList(BoardVO vo);
+	
 }
