@@ -15,11 +15,12 @@ import com.edu.board.vo.BoardVO;
 public class BoardDAOTest {
 
 	@Autowired
-	BoardJDBC boardDAO;
+//	BoardJDBC boardDAO;
+	BoardMybatis boardDAO;
 
 	@Test
 	@DisplayName("게시글 추출이 정상 동작한다")
-	public void getwBoardTest() {
+	public void getBoardTest() {
 		BoardVO vo = BoardVO.builder().seq(1).build();
 		BoardVO result = boardDAO.getBoard(vo);
 	}
