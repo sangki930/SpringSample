@@ -1,9 +1,15 @@
 package com.example.domain;
 
+import java.time.LocalDateTime;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -26,5 +32,12 @@ public class Member {
 	private String password; // 계정 비밀번호
 	
 	private boolean isUsed; // 개인정보 이용동의
+	
+	@Column(updatable = false)
+	@CreatedDate
+	private LocalDateTime created_at;
+	
+	@LastModifiedDate
+	private LocalDateTime updated_at;
 	
 }
