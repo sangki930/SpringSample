@@ -1,0 +1,9 @@
+spring:
+ batch:
+    job:
+      enabled: false
+      names : ${job.name:NONE} # program arguments에 job.name이 있으면 할당, 없으면 실행 안함
+      
+logging:
+  level:
+    root: info
