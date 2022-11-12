@@ -35,7 +35,7 @@ public class Member {
 	
 	@Column(updatable = false)
 	@CreatedDate
-	private LocalDateTime created_at;
+	private LocalDateTime created_at; // 생성날짜
 	
 	@LastModifiedDate
 	private LocalDateTime updated_at;
