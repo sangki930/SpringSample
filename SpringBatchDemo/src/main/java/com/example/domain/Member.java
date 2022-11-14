@@ -25,10 +25,13 @@ public class Member {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id; // Member 아이디
 	
+	@Column
 	private String name; // Member 이름
 	
+	@Column(length=20)
 	private String account; // Member 계정명
 	
+	@Column
 	private String password; // 계정 비밀번호
 	
 	private boolean isUsed; // 개인정보 이용동의
