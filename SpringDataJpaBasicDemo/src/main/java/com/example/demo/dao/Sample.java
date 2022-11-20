@@ -3,6 +3,7 @@ package com.example.demo.dao;
 import java.time.Instant;
 import java.time.LocalDateTime;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -18,6 +19,7 @@ public class Sample {
 
 	@Id
 	private Long id;
+	
 	private String name;
 	private String attr1;
 	private String attr2;
