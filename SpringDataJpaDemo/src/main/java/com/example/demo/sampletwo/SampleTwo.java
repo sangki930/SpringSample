@@ -37,7 +37,7 @@ public class SampleTwo extends CommonEntity{
 	
 	private String attr2;
 	
-	@Enumerated(EnumType.STRING) // ÄÃ·³ÀÌ Enum Å¸ÀÔÀÏ ¶§
+	@Enumerated(EnumType.STRING) // Mapping ì‹œ String
 	private Type type;
 }
 
