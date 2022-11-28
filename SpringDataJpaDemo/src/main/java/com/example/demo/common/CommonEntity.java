@@ -13,7 +13,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 // 공통 엔티티 클래스
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -26,5 +25,5 @@ public class CommonEntity {
 	
 	@LastModifiedDate // 마지막 수정 시각
 	private LocalDateTime updated_at; // 최근 수정 시각
-	private boolean deleted;
+	private boolean deleted; // 삭제 여부
 }

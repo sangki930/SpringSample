@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 
-@EnableJpaAuditing(modifyOnCreate = true) // Jpa Auditing Ȱ��ȭ
+@EnableJpaAuditing(modifyOnCreate = true) // Jpa Auditing 실행
 @SpringBootApplication
 public class SpringDataJpaDemoApplication {
 

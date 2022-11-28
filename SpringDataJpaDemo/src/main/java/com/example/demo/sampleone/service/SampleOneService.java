@@ -9,6 +9,15 @@ import com.example.demo.sampleone.SampleOne;
 import com.example.demo.sampleone.repository.SampleOneRepository;
 
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.sampleone.SampleOne;
+import com.example.demo.sampleone.repository.SampleOneRepository;
+
+
 @Service
 public class SampleOneService {
 
@@ -19,33 +28,33 @@ public class SampleOneService {
 		this.sampleOneRepository = sampleOneRepository;
 	}
 	
-	// SampleOne ¸ñ·Ï ºÎ¸£±â
+	// SampleOne ëª©ë¡ ë¶€ë¥´ê¸°
 	public List<SampleOne> getSampleOneList(){
 		return sampleOneRepository.findAll();
 	}
 	
-	// id°ªÀ¸·Î SampleOne °¡Á®¿À±â
+	// idê°’ìœ¼ë¡œ SampleOne ê°€ì ¸ì˜¤ê¸°
 	public SampleOne getSampleOne(long id) {
 		return sampleOneRepository.getById(id);
 	}
 	
-	// SampleOne 1°³ Ãß°¡
+	// SampleOne 1ê°œ ì¶”ê°€
 	public SampleOne add(SampleOne sampleOne) {
 		return sampleOneRepository.save(sampleOne);
 	}
 	
-	// SampleOne ÀúÀå ¹× ÇÃ·¯½¬
-	// flush´Â ¿µ¼Ó¼º ÄÁÅØ½ºÆ®ÀÇ º¯°æ ³»¿ëÀ» DB¿¡ ¹İ¿µÇÑ´Ù.
+	// SampleOne ì €ì¥ ë° í”ŒëŸ¬ì‰¬
+	// flushëŠ” ì˜ì†ì„± ì»¨í…ìŠ¤íŠ¸ì˜ ë³€ê²½ ë‚´ìš©ì„ DBì— ë°˜ì˜í•œë‹¤.
 	public SampleOne addAndFlush(SampleOne sampleOne) {
 		return sampleOneRepository.saveAndFlush(sampleOne);
 	}
 	
-	// sampleOneÀ¸·Î ÀüºÎ Áö¿ì±â
+	// sampleOneìœ¼ë¡œ ì „ë¶€ ì§€ìš°ê¸°
 	public void deleteSampleOne(SampleOne sampleOne) {
 		sampleOneRepository.delete(sampleOne);
 	}
 	
-	// SampleOne ÀüºÎ Áö¿ì±â
+	// SampleOne ì „ë¶€ ì§€ìš°ê¸°
 	public void deleteSampleOneAll() {
 		sampleOneRepository.deleteAll();
 	}
