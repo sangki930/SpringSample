@@ -35,3 +35,13 @@
 ## @Configuration
 이 어노테이션을 선언한 클래스는 빈(Bean) 설정을 담당하는 클래스가 된다. 이 클래스 안에서 @Bean이 동봉된 메소드를 선언하면, 그 메소드를 통해 스프링 빈을 정의하고 생명주기를 설정하게 된다.
 
+    @Configuration
+    public class ApplicationConfig{
+	    @Autowired
+	    private SampleComponent sc;
+
+		@Bean
+		public void print(){
+			System.out.println("Application Config 활용");
+		}
+    }
