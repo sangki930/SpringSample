@@ -1,8 +1,5 @@
-**
+# Spring Bean 활용 Sample
 
-## Spring Bean 활용 Sample
-
-**
 ## @Bean
 개발자가 직접 제어가 어려운 외부라이브러리 등을 Bean으로 등록
 
