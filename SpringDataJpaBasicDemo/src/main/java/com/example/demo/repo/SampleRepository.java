@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.example.demo.dao.Sample;
 
-// Spring Data JPA ÀÇÁ¸¼º Ãß°¡ ÈÄ JpaRepository¸¦ »ó¼ÓÇÏ¸é @Repository¸¦ ¼±¾ğÇÒ ÇÊ¿ä°¡ ¾øÀ½
+//Spring Data JPA ì˜ì¡´ì„± ì¶”ê°€ í›„ JpaRepositoryë¥¼ ìƒì†í•˜ë©´ @Repositoryë¥¼ ì„ ì–¸í•  í•„ìš”ê°€ ì—†ìŒ
 public interface SampleRepository extends JpaRepository<Sample, Long>{
 	// JPQL
 }

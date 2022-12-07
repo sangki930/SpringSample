@@ -14,40 +14,40 @@ public class SampleService {
 	
 	private final SampleRepository sampleRepository;
 
-	// »ı¼ºÀÚ¿¡ ÀÇÇÑ ÀÇÁ¸¼º ÁÖÀÔ
+	// ìƒì„±ìì— ì˜í•œ ì˜ì¡´ì„± ì£¼ì…
 	@Autowired
 	public SampleService(SampleRepository sampleRepository) {
 		this.sampleRepository = sampleRepository;
 	}
 	
 
-	// ¸ğµç sample °´Ã¼ ¾ò±â
+	// ëª¨ë“  sample ê°ì²´ ì–»ê¸°
 	public List<Sample> getAllSamples(){
 		return sampleRepository.findAll();
 	}
 	
-	// id·Î sample ÇÏ³ª ¾ò±â
+	// idë¡œ sample í•˜ë‚˜ ì–»ê¸°
 	public Sample getSample(long id) {
 		Optional<Sample> opt = sampleRepository.findById(id);
 		
-		return opt.orElseThrow(()->{throw new NullPointerException("ÇØ´çÇÏ´Â SampleÀÌ ¾ø½À´Ï´Ù.");});
+		return opt.orElseThrow(()->{throw new NullPointerException("í•´ë‹¹í•˜ëŠ” Sampleì´ ì—†ìŠµë‹ˆë‹¤.");});
 	}
 	
-	// id·Î Sample ÇÏ³ª ¾ò±â(nullÀ» ¹İÈ¯ÇÒ ¼ö ÀÖÀ½)
+	// idë¡œ Sample í•˜ë‚˜ ì–»ê¸°(nullì„ ë°˜í™˜í•  ìˆ˜ ìˆìŒ)
 	public Sample getSampleOld(long id) {
 		return sampleRepository.getById(id);
 	}
 	
-	// Sample ÇÏ³ª Ãß°¡
+	// Sample í•˜ë‚˜ ì¶”ê°€
 	public Sample addSample(Sample sample) {
-		// save ¸Ş¼Òµå´Â nullÀ» Çã¿ëÇÏÁö ¾ÊÀ½
+		// save ë©”ì†Œë“œëŠ” nullì„ í—ˆìš©í•˜ì§€ ì•ŠìŒ
 		if(sample == null) {
-			throw new NullPointerException("SampleÀº NullÀ» Çã¿ëÇÏÁö ¾Ê½À´Ï´Ù.");
+			throw new NullPointerException("Sampleì€ Nullì„ í—ˆìš©í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		}
 		return sampleRepository.save(sample);
 	}
 	
-	// Sample ¼öÁ¤
+	// Sample ìˆ˜ì •
 	public Sample updateSample(Sample sample) {
 		
 		Sample old = getSample(sample.getId());
@@ -58,7 +58,7 @@ public class SampleService {
 		return sampleRepository.save(sample);
 	}
 	
-	// Sample »èÁ¦
+	// Sample ì‚­ì œ
 	public void deleteSample(Sample sample) {
 		sampleRepository.delete(sample);
 	}
