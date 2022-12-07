@@ -12,7 +12,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-// °øÅë ¿£Æ¼Æ¼ Å¬·¡½º
+// ê³µí†µ ì—”í‹°í‹° í´ë˜ìŠ¤
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -20,10 +20,10 @@ import lombok.NoArgsConstructor;
 public class CommonEntity {
 	
 	@Column(updatable = false)
-	@CreatedDate // ¿£Æ¼Æ¼ »ı¼º ½Ã°¢
-	private LocalDateTime created_at; // ¿£Æ¼Æ¼ »ı¼º ½Ã°¢
+	@CreatedDate // ì—”í‹°í‹° ìƒì„± ì‹œê°
+	private LocalDateTime created_at; // ì—”í‹°í‹° ìƒì„± ì‹œê°
 	
-	@LastModifiedDate // ¸¶Áö¸· ¼öÁ¤ ½Ã°¢
-	private LocalDateTime updated_at; // ÃÖ±Ù ¼öÁ¤ ½Ã°¢
-	private boolean deleted; // »èÁ¦ ¿©ºÎ
+	@LastModifiedDate // ë§ˆì§€ë§‰ ìˆ˜ì • ì‹œê°
+	private LocalDateTime updated_at; // ìµœê·¼ ìˆ˜ì • ì‹œê°
+	private boolean deleted; // ì‚­ì œ ì—¬ë¶€
 }
