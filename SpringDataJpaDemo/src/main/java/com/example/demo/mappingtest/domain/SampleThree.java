@@ -2,6 +2,7 @@ package com.example.demo.mappingtest.domain;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -37,6 +38,6 @@ public class SampleThree extends CommonEntity{
 	
 	private String attr3;
 	
-	@OneToMany(mappedBy = "sampleThree")
+	@OneToMany(mappedBy = "sampleThree", cascade = CascadeType.ALL)
 	private List<SampleFour> list;
 }
