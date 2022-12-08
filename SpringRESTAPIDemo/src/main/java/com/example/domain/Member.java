@@ -10,6 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Index;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
+import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
@@ -47,6 +48,10 @@ public class Member extends CommonEntity{
 	
 	@Column(length = 20)
 	private String password;
+	
+	@Column(length = 100)
+	@Email
+	private String email;
 	
 	@Column
 	@Enumerated
