@@ -3,7 +3,6 @@ package com.example.controller;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,6 +31,13 @@ public class MemberController {
 	private final MemberService memberService;
 	
 	// 회원 전체 조회
+//	@Operation(summary = "test hello", description = "get MemberList")
+//    @ApiResponses({
+//            @ApiResponse(responseCode = "200", description = "OK !!"),
+//            @ApiResponse(responseCode = "400", description = "BAD REQUEST !!"),
+//            @ApiResponse(responseCode = "404", description = "NOT FOUND !!"),
+//            @ApiResponse(responseCode = "500", description = "INTERNAL SERVER ERROR !!")
+//    })
 	@GetMapping(value = "/getMemberList")
 	public ResponseEntity<?> getMemberList(
 			@RequestHeader Map<String,Object> header,
