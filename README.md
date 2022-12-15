@@ -13,3 +13,4 @@ Spring 예제를 올리는 공간
 | [SpringBatchBasicDemo](https://github.com/sangki930/SpringSample/tree/main/SpringBatchBasicDemo) | Spring Batch 샘플(기본) | 프로젝트 빌드 Maven |
 | [SpringBatchDemo](https://github.com/sangki930/SpringSample/tree/main/SpringBatchDemo) | Spring Batch 샘플(심화) | 프로젝트 빌드 Maven |
 | [SpringRESTAPIDemo](https://github.com/sangki930/SpringSample/tree/main/SpringRESTAPIDemo) | Spring Boot를 활용한 REST API 구축 | 프로젝트 빌드 Gradle |
+| [SpringServletSample](https://github.com/sangki930/SpringSample/tree/main/SpringServletSample) | Spring Boot MVC + Servlet | 프로젝트 빌드 Gradle |
