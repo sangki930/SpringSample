@@ -41,7 +41,7 @@ public class SampleOne extends CommonEntity{
 	@Column(name = "name", insertable = true, nullable = false)
 	private String name;
 	
-	@Email
+	@Email // Email 형식인지
 	@Column
 	private String email;
 	
