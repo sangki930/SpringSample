@@ -75,6 +75,7 @@ public class MemberController {
 	@RequestMapping(method = RequestMethod.PUT, value = "/updateMember")
 	public ResponseEntity<?> updateMember(@RequestBody Member member){
 		memberService.updateMember(member);
+		log.info("===> 회원 수정 완료");
 		return new ResponseEntity<Member>(member,HttpStatus.OK);
 	}
 	
@@ -84,6 +85,8 @@ public class MemberController {
 		
 		Member member = Member.builder().id(id).build();
 		memberService.deleteMember(member);
+		log.info("회원삭제 완료");
+		
 		return new ResponseEntity<Member>(new Member(),HttpStatus.OK);
 	}
 	
@@ -100,6 +103,7 @@ public class MemberController {
 					e.getMessage());
 			return new ResponseEntity<>(ret,HttpStatus.BAD_REQUEST);
 		}
+		log.info("비밀번호 변경 완료");
 		return new ResponseEntity<Member>(new Member(),HttpStatus.OK);
 	}
 	
