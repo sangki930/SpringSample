@@ -2,7 +2,6 @@ package com.example.config;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
-import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.repeat.RepeatStatus;
@@ -55,7 +54,6 @@ Item Processor는 Reader에서 읽어온 Item을 데이터를 처리하는 역�
 */
 
 @Slf4j
-
 @Configuration
 @RequiredArgsConstructor
 public class MultipleBatchConfig {
