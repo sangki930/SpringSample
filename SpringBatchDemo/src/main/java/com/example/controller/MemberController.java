@@ -1,5 +1,7 @@
 package com.example.controller;
 
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +23,12 @@ import lombok.extern.slf4j.Slf4j;
 public class MemberController {
 
 	private final MemberService memberService;
+	
+	@GetMapping("/list")
+	public ResponseEntity<List<Member>> getMemberList(
+			){
+		return null;
+	}
 	
 	@GetMapping
 	public ResponseEntity<Member> getMember(
