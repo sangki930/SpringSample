@@ -27,10 +27,12 @@ public class MemberController {
 	@GetMapping("/list")
 	public ResponseEntity<List<Member>> getMemberList(
 			){
-		return null;
+		log.info("회원 전체 조회");
+		List<Member> memberList = memberService.getMemberList();
+		return new ResponseEntity<List<Member>>(HttpStatus.OK);
 	}
 	
-	@GetMapping
+	@GetMapping("/{id}")
 	public ResponseEntity<Member> getMember(
 			@PathVariable Long id
 			){
@@ -40,7 +42,15 @@ public class MemberController {
 	}
 	
 	@PatchMapping
-	public ResponseEntity<?> updateMember(){
+	public ResponseEntity<?> updateMember(
+			
+			){
+		return null;
+	}
+	
+	public ResponseEntity<?> deleteMember(
+			@PathVariable Long id
+			){
 		return null;
 	}
 }
