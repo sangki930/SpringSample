@@ -8,7 +8,9 @@ import com.example.domain.Member;
 import com.example.repository.MemberRepository;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class MemberServiceImpl implements MemberService{
@@ -49,10 +51,18 @@ public class MemberServiceImpl implements MemberService{
 		return del;
 	}
 
+	// Member 인스턴스로 물리적 삭제
 	@Override
 	public void deleteMember(Member member) {
 		// TODO Auto-generated method stub
-	
+		memberRepository.delete(member);
+	}
+
+	// ID로 회원 물리적 삭제
+	@Override
+	public void deleteMemberById(Long id) {
+		// TODO Auto-generated method stub
+		memberRepository.deleteById(id);
 	}
 
 	

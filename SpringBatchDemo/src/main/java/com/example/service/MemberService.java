@@ -23,4 +23,7 @@ public interface MemberService{
 	
 	// 회원 삭제(물리적)
 	public void deleteMember(Member member);
+	
+	// id로 회원삭제
+	public void deleteMemberById(Long id);
 }
