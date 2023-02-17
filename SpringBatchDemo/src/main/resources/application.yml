@@ -1,9 +1,24 @@
 spring:
  batch:
+    jdbc:
+      initialize-schema : always
     job:
       enabled: false
-      names : ${job.name:NONE} # program arguments에 job.name이 있으면 할당, 없으면 실행 안함
-      
+      names : ${job.name:NONE} # program arguments에 job.name이 있으면 할당, 없으면 실행 안함  
+ datasource:
+    driver-ClassName: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/psk
+    username: root
+    password: 1234
+ jpa:
+  hibernate: # hibernate 사용설정
+    ddl-auto: create-drop
+  properties:
+    hibernate:
+     format_sql: true
+   
 logging:
   level:
     root: info
+    '[org.hibernate.sql]': debug
+    '[org.hibernate.type]': trace # 실제 들어가는 파라미터 값 찍어줌

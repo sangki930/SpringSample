@@ -14,11 +14,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.controller.dto.Message;
 import com.example.domain.Member;
 import com.example.service.MemberService;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+
 
 @RestController
 @Slf4j
@@ -27,6 +29,12 @@ import lombok.extern.slf4j.Slf4j;
 public class MemberController {
 
 	private final MemberService memberService;
+	
+	@GetMapping("/batch")
+	public ResponseEntity<Message> runBatch(){
+		log.info("배치 실행");
+		return new ResponseEntity<Message>(new Message("배치 실행"),HttpStatus.OK);
+	}
 	
 	@GetMapping("/list")
 	public ResponseEntity<List<Member>> getMemberList(
@@ -60,17 +68,18 @@ public class MemberController {
 	public ResponseEntity<?> refreshMember(
 			@PathVariable Long id
 			) {
-		return null;
+		log.info("회원 수정 성공==>{}", id);
+		return new ResponseEntity<String>("",HttpStatus.OK);
 	}
 	
 	// 미사용
-	@PatchMapping("/{id}")
-	public ResponseEntity<?> updateMember(
-			@PathVariable Long id
-			){
-		return null;
-	}
-	
+//	@PatchMapping("/{id}")
+//	public ResponseEntity<?> updateMember(
+//			@PathVariable Long id
+//			){
+//		return new ResponseEntity<String>("",HttpStatus.OK);
+//	}
+//	
 	@PatchMapping("/{id}")
 	public ResponseEntity<?> deleteMemberLogical(
 			@PathVariable Long id
@@ -85,7 +94,7 @@ public class MemberController {
 	public ResponseEntity<?> deleteMember(
 			@PathVariable Long id
 			){
-		return null;
+		return new ResponseEntity<String>("물리적으로 삭제",HttpStatus.OK);
 	}
 	
 }
